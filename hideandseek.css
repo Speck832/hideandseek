@@ -1,0 +1,22 @@
+.titreheader {
+    color: aquamarine;
+}
+.titrenav {
+    color: aquamarine
+}
+.txt {
+    color: #61a5df
+}
+.titrenav {
+    text-decoration:none ;
+    font-weight: bold;
+    display: inline-block;
+    transition:all 0.3s ease-in-out;
+    
+}
+.titrenav:hover {
+    transform:scale(1.1)
+}
+#footer {
+    background-color: #17161e;
+}
