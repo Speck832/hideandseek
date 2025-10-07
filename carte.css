@@ -6,3 +6,13 @@
 #titre {
     color: aquamarine;
 }
+#button {
+    background-color: aquamarine;
+    color: #28252b;
+    border-color: blue;
+    border-width: 3px;
+    border-style:double;
+    height: 45px;
+    width: 200px;;
+    font-weight: bold;
+}
