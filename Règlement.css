@@ -19,4 +19,12 @@
 }
 .rgl {
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: aquamarine;
+    padding-right: 18px;
+    padding-left: 18px;
 }
