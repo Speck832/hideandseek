@@ -1,0 +1,22 @@
+#retour {
+    color: aquamarine;
+    font-weight: bold;
+    text-decoration: none;
+}
+#titre  {
+    color: aquamarine;
+}
+#texte {
+    color:aquamarine ;
+}
+#footer {
+    background-color: aquamarine;
+}
+#lien {
+    color:#28252b ;
+    font-weight: bold;
+    text-decoration: none;
+}
+.rgl {
+    margin-bottom: 15px;
+}
