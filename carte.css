@@ -18,6 +18,24 @@
     border-radius: 7px;
     font-size: large;
 }
+.carte {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+#button:hover {
+    background-color: #3a8e3e;
+}
+.crt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 #carte {
-    width: 100%;
+    width: 90%;
 }
