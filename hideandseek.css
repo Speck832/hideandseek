@@ -33,9 +33,22 @@
 }
 #foote {
     background-color: aquamarine;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    font-size: large;
 }
 #lien {
     text-decoration: none;
     font-weight: bold;
     color: #28252b;
+}
+.ctr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#image {
+    width:404px
 }
