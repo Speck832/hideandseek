@@ -46,7 +46,7 @@ if (isset($_GET['id'])) {
     if (isset($data[$id])) {
         $data[$id] = true;
         file_put_contents($dataFile, json_encode($data));
-        echo "<div class='qr-message success'>🎉 Bonus #$id trouvé !</div>";
+        echo "<div class='qr-message success'>🎉 Bonus $id trouvé !</div>";
     } else {
         echo "<div class='qr-message error'>❌ QR-code inconnu (#$id)</div>";
     }

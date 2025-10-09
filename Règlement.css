@@ -11,6 +11,9 @@
 }
 #footer {
     background-color: aquamarine;
+    padding-left: 8px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 #lien {
     color:#28252b ;

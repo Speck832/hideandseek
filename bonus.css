@@ -16,4 +16,7 @@
 }
 #footer {
     background-color: aquamarine;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 8px;
 }

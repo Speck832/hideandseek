@@ -62,7 +62,7 @@
 .qr-item {
   padding: 10px 15px;
   border-radius: 10px;
-  background: #eee;
+  background: #421f1f;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -101,14 +101,14 @@
 .qr-reset input {
   padding: 6px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #222121;
 }
 
 .qr-reset button {
   padding: 6px 12px;
   border-radius: 5px;
   background: #0077ff;
-  color: white;
+  color: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
 }

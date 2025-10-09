@@ -39,3 +39,10 @@
 #carte {
     width: 90%;
 }
+#footer {
+    background-color: aquamarine;
+    color: #28252b;
+    padding-left: 8px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
