@@ -85,7 +85,7 @@ echo "
         <p class="txt">Crédits :</p>
         <ul class="txt">
         <li>Estéban</li>
-        <li>Evan</li>
+        <li><a href="https://www.youtube.com/@EvaixZ">Evan</a></li>
         <li>Logan</li>
         <li>Maxime</li>
         <li>Liam</li>
