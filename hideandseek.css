@@ -52,3 +52,63 @@
 #image {
     width:404px
 }
+.qr-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.qr-item {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #eee;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.qr-item.found {
+  background: #192219;
+  color: #0a0;
+}
+
+.qr-item.not-found {
+  background: #381212;
+  color: #a00;
+}
+
+.qr-message {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.qr-message.success {
+  background: #203020;
+  color: #046604;
+}
+
+.qr-message.error {
+  background: #5a1a1a;
+  color: #a00;
+}
+
+.qr-reset {
+  margin-top: 20px;
+}
+
+.qr-reset input {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.qr-reset button {
+  padding: 6px 12px;
+  border-radius: 5px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
