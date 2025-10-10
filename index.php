@@ -33,26 +33,43 @@
     </section>
     <section>
         <?php
-// === CONFIG ===
+// === CONFIGURATION ===
 $dataFile = 'data.json';
-$password = 'Guinness7';
+$password = 'Guinness7'; // 🔒 Change-le à ton vrai mot de passe
 
-// Charger les données
+// === NOMS DES QR-CODES ===
+$qrNames = [
+    "1" => "Gilet jaune (chasseur)",
+    "2" => "Géolocalisation précise (chasseur)",
+    "3" => "Freeze 1 (chassé)",
+    "4" => "Freeze 2 (chassé)",
+    "5" => "Campement pendant 10 minutes (chassé)"
+];
+
+// === CHARGER LES DONNÉES ===
+if (!file_exists($dataFile)) {
+    // Si le fichier n'existe pas, on le crée avec tous les QR non trouvés
+    $init = [];
+    foreach ($qrNames as $id => $name) {
+        $init[$id] = false;
+    }
+    file_put_contents($dataFile, json_encode($init));
+}
 $data = json_decode(file_get_contents($dataFile), true);
 
-// Si un QR est scanné
+// === MARQUER UN QR TROUVÉ ===
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     if (isset($data[$id])) {
         $data[$id] = true;
         file_put_contents($dataFile, json_encode($data));
-        echo "<div class='qr-message success'>🎉 Bonus $id trouvé !</div>";
+        echo "<div class='qr-message success'>🎉 <strong>{$qrNames[$id]}</strong> trouvé !</div>";
     } else {
         echo "<div class='qr-message error'>❌ QR-code inconnu (#$id)</div>";
     }
 }
 
-// Si on demande une réinitialisation
+// === RÉINITIALISATION ===
 if (isset($_POST['reset'])) {
     if ($_POST['password'] === $password) {
         foreach ($data as $key => $val) $data[$key] = false;
@@ -63,16 +80,17 @@ if (isset($_POST['reset'])) {
     }
 }
 
-// Affichage
+// === AFFICHAGE DE L'ÉTAT GÉNÉRAL ===
 echo "<div class='qr-list'>";
 foreach ($data as $key => $found) {
-    echo "<div class='qr-item " . ($found ? "found" : "not-found") . "'>";
-    echo "Bonus $key : " . ($found ? "✅ Trouvé" : "❌ Non trouvé");
-    echo "</div>";
+    $name = $qrNames[$key];
+    $status = $found ? "✅ Trouvé" : "❌ Non trouvé";
+    $class = $found ? "found" : "not-found";
+    echo "<div class='qr-item $class'><strong>$name</strong><br>$status</div>";
 }
 echo "</div>";
 
-// Formulaire de reset
+// === FORMULAIRE DE RÉINITIALISATION ===
 echo "
 <form class='qr-reset' method='POST'>
     <input type='password' name='password' placeholder='Mot de passe'>
@@ -85,7 +103,7 @@ echo "
         <p class="txt">Crédits :</p>
         <ul class="txt">
         <li>Estéban</li>
-        <li><a href="https://www.youtube.com/@EvaixZ">Evan</a></li>
+        <li><a id="evan" href="https://www.youtube.com/@EvaixZ">Evan</a></li>
         <li>Logan</li>
         <li>Maxime</li>
         <li>Liam</li>
