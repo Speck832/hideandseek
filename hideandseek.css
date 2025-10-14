@@ -12,7 +12,6 @@
     font-weight: bold;
     display: inline-block;
     transition:all 0.3s ease-in-out;
-    
 }
 .titrenav:hover {
     transform:scale(1.1)
