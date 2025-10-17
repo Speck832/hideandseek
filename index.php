@@ -35,7 +35,7 @@
         <?php
 // === CONFIGURATION ===
 $dataFile = 'data.json';
-$password = 'Guinness7'; // 🔒 Change-le à ton vrai mot de passe
+$password = 'Guinness7';
 
 // === NOMS DES QR-CODES ===
 $qrNames = [
@@ -48,7 +48,6 @@ $qrNames = [
 
 // === CHARGER LES DONNÉES ===
 if (!file_exists($dataFile)) {
-    // Si le fichier n'existe pas, on le crée avec tous les QR non trouvés
     $init = [];
     foreach ($qrNames as $id => $name) {
         $init[$id] = false;
