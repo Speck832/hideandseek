@@ -35,7 +35,7 @@
         <?php
 // === CONFIGURATION ===
 $dataFile = 'data.json';
-$password = 'Guinness7'; // 🔒 Change-le à ton vrai mot de passe
+$password = 'Guinness7';
 
 // === NOMS DES QR-CODES ===
 $qrNames = [
